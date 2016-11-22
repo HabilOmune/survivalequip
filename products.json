@@ -1,0 +1,193 @@
+{
+
+ "quick run kits" : 
+ {
+     "description": "We can tailor make your quick run bag based on your budgetary or operational  requirements. We have a large number of items available ex-stock to spruce up your kit",
+     "image":"img/products/qrks/1.jpg",
+     "images":
+     {
+     "image1":"img/products/qrks/1.1.jpg",
+     "image2":"img/products/qrks/2.jpg",
+     "image3":"img/products/qrks/3.jpg"    
+     }
+ },
+
+
+  "fire & safety":
+ {
+     "description":"We supply all manner of fire safety and fire fighting equipmnet. Survival equip is firmly commited to improving the safety of field workers  and the enviromnents in which they operate",
+     "image":"img/products/firesafety/1.jpg",
+     "images":
+     {
+     "image1":"img/products/firesafety/1.1.jpg",
+     "image2":"img/products/firesafety/2.jpg",
+     "image3":"img/products/firesafety/3.jpg"    
+     }
+ },
+
+ "Firts-Aid Kits":
+ {
+     "description":"Our first-aid kits conform to WHO standards. We also deal  in a wide range of medical and non-medical supplies such as laboratory equipment and field hospital tens",
+     "image":"img/products/firstaid/1.jpg",
+     "images":
+     {
+     "image1":"img/products/transportpacks/1.1.jpg",
+     "image2":"img/products/firstaid/2.jpg",
+     "image3":"img/products/firstaid/3.jpg"    
+     }
+ },
+
+  "Camping Equipment":
+ {
+     "description":"We also specialise in a wide range of outdoor durvival  equipment. All of our products are manufufctured by highly reputable fully certified, fully certified  and internationally recognised companies.",
+     "image":"img/products/camping/1.jpg",
+     "images":
+     {
+     "image1":"img/products/camping/1.1.jpg",
+     "image2":"img/products/camping/2.jpg",
+     "image3":"img/products/camping/3.jpg"    
+     }
+ },
+
+ "camping cookwear":
+ {
+     "description":"",
+     "image":"img/products/cookwear/1.jpg",
+     "images":
+     {
+     "image1":"img/products/cookwear/1.1.jpg",
+     "image2":"img/products/cookwear/2.jpg",
+     "image3":"img/products/cookwear/3.jpg"    
+     }
+ },
+
+ "compases":
+ {
+     "description":"",
+     "image":"img/products/compasses/1.jpg",
+     "images":
+     {
+     "image1":"img/products/compasses/1.1.jpg",
+     "image2":"img/products/compasses/2.jpg",
+     "image3":"img/products/compasses/3.jpg"    
+     }
+ },
+
+ "headwear":
+ {
+     "description":"",
+     "image":"img/products/headwear/1.jpg",
+     "images":
+     {
+     "image1":"img/products/headwear/1.1.jpg",
+     "image2":"img/products/headwear/2.jpg",
+     "image3":"img/products/headwear/3.jpg"    
+     }
+ },
+
+ "multitools":
+ {
+     "description":"",
+     "image":"img/products/multitools/1.jpg",
+     "images":
+     {
+     "image1":"img/products/multitools/1.1.jpg",
+     "image2":"img/products/multitools/2.jpg",
+     "image3":"img/products/multitools/3.jpg"    
+     }
+ },
+
+  "Lighting Solutions":
+ {
+     "description":"",
+     "image":"img/products/lighting/1.jpg",
+     "images":
+     {
+     "image1":"img/products/lighting/1.1.jpg",
+     "image2":"img/products/lighting/2.jpg",
+     "image3":"img/products/lighting/3.jpg"    
+     }
+ },
+
+  "Transport packs":
+ {
+     "description":"",
+     "image":"img/products/transportpacks/1.jpg",
+     "images":
+     {
+     "image1":"img/products/transportpacks/1.1.jpg",
+     "image2":"img/products/transportpacks/2.jpg",
+     "image3":"img/products/transportpacks/3.jpg"    
+     }
+ },
+ "Water Purification":
+ {
+     "description":"",
+     "image":"img/products/waterpurification/1.jpg",
+     "images":
+     {
+     "image1":"img/products/waterpurification/1.1.jpg",
+     "image2":"img/products/waterpurification/2.jpg",
+     "image3":"img/products/waterpurification/3.jpg"    
+     }
+ },
+
+  "whistles":
+ {
+     "description":"",
+     "image":"img/products/whistles/1.jpg",
+     "images":
+     {
+     "image1":"img/products/whistless/1.1.jpg",
+     "image2":"img/products/whistless/2.jpg",
+     "image3":"img/products/whistles/3.jpg"    
+     }
+ },
+  "meals ready to eat" : 
+ {
+    "description": "Sure-Pak Meals are fully prepared and ready to eat fresh meals. Direct from a U.S government contractor. The pack contains 12 full meals of each; entree, side dish, desserts, cracker packs, spreads, beverages and coffees along with assorted condiments. These Meals are great for emergency kits and survival situations",
+    "image": "img/products/MREs/1.jpg",
+     "images":
+     {
+     "image1":"img/products/MREs/1.1.jpg",
+     "image2":"img/products/MREs/2.jpg",
+     "image3":"img/products/MREs/3.jpg"    
+     }
+ },
+ 
+    "water filtration systems": 
+  {
+    "description" : "",
+    "image": "img/products/waterfiltration/1.jpg",
+
+    "Rothco 9430 Aquamira Tactical Frontier Pro Water Filter":
+     {
+         "description" : "",
+         "brand": "",
+         "origin": "",
+         "image1": "img/products/waterfiltration/9403/1.jpg"
+     },
+
+    "Rothco 9498 Aquamira Tactical Emergency Water Bottle Filter USMADE":
+     {
+         "description" : "",
+         "brand": "",
+         "origin": "",
+         "image1": "img/products/waterfiltration/9498/1.jpg"
+
+     },
+
+    "ROTHCO 9419 AQUAMIRA FRONTIER EMERGENCY WATERFILTRATION SYSTEM":
+     {
+         "description" : "",
+         "brand": "",
+         "origin": "",
+         "image1": "img/products/waterfiltration/9419/1.jpg"
+     }
+
+  }
+
+
+}
+
+
