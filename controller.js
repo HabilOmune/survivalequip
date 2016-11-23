@@ -15,8 +15,7 @@ $scope.getDefult = function(){
         })
 }
 
-
-
+$scope.getDefult();
 
     $scope.setPrd = function (value) {
         $rootScope.selectedProduct = value;
