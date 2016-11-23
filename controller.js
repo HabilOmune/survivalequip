@@ -4,7 +4,7 @@ var survivalequip = angular.module('survivalequip', ['ui.bootstrap']);
 
 survivalequip.controller('productsCtrl', function ($scope, $http, $rootScope, $timeout) {
 
-
+$scope.getDefult = function(){
     $http
         ({
             method: 'GET',
@@ -13,6 +13,9 @@ survivalequip.controller('productsCtrl', function ($scope, $http, $rootScope, $t
         .then(function (res) {
         $rootScope.selectedProduct = res.data;
         })
+}
+
+
 
 
     $scope.setPrd = function (value) {
