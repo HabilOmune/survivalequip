@@ -5,32 +5,32 @@
 
     <script type="text/javascript" src="slick/slick.min.js"></script>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#333399">
-	<title>survivalequip.com | Welcome</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#333399">
+    <title>survivalequip.com | Welcome</title>
 
 
-	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="fullpage.js/dist/jquery.fullpage.css" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Dosis|Poiret+One" rel="stylesheet">
-	<link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="slick/slick.css" />
-	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-	<link href="customcss/style.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="fullpage.js/dist/jquery.fullpage.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Poiret+One" rel="stylesheet">
+    <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link href="customcss/style.css" rel="stylesheet" />
 
 
-	<script src="angular/angular.min.js"></script>
-	<script src="controller.js"></script>
-	<script src="js/jquery.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="fullpage.js/dist/scrolloverflow.min.js"></script>
-	<script src="fullpage.js/dist/jquery.fullpage.min.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="angular/angular-ui-bs.js"></script>
-	<script src="app.js"></script>
-	<script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="angular/angular.min.js"></script>
+    <script src="controller.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="fullpage.js/dist/scrolloverflow.min.js"></script>
+    <script src="fullpage.js/dist/jquery.fullpage.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="angular/angular-ui-bs.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 
 
 </head>
@@ -244,24 +244,19 @@
                 <center class="section-heads">
                     <h3>Main Products</h3>
                 </center>
-          <h6>Click on a Product to view details</h6>
-                <div id="exTab2" class="container">
+                <div id="exTab2" style="padding-left: 2rem;padding-right:2rem">
                     <ul class="nav nav-tabs">
-                        <li ng-repeat="(key,value) in products" ng-click="setPrd(value)">
-                            <a href="#{{$index}}" data-toggle="tab">{{key}}</a>
+                        <li class="active"><a data-toggle="tab" href="#defult">Meals Raady To Eat</a></li>
+                        <li ng-repeat="(key,value) in products" ng-if="key  !='Meals Ready To Eat'" ng-click="setPrd(value)">
+                            <a href="#2" data-toggle="tab">{{key}}</a>
                         </li>
                     </ul>
 
-
-
-
-                    <div class="tab-content">
-                        <div class="tab-pane fade in  active" id="{{$index}}">
+                    <div class="tab-content container" >
+                        <div id="defult" class="tab-pane fade in active">
                             <br />
                             <div class="row">
-                                
                                 <div class="col-lg-6">
-
                                     <div class="row">
                                         <div class="col-sm-6 col-md-6" ng-repeat="product in selectedProduct">
                                             <a href="#" class="thumbnail active" ng-click="setSubPrd(product)">
@@ -292,447 +287,496 @@
                                     </div>
                                 </div>
                             </div>
-
-
                             <div class="row">
-
                             </div>
                         </div>
 
 
+                        <div class="tab-pane fade in" id="2">
+                            <br />
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6" ng-repeat="product in selectedProduct">
+                                            <a href="#" class="thumbnail active" ng-click="setSubPrd(product)">
+                                                <img src="{{product.image}}" alt="Generic placeholder thumbnail">
+                                                <h5>{{product.name}}</h5>
+                                                <h6>view details > </h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <ul class="nav nav-tabs" ng-show=" desc">
+                                            <li class="active"><a data-toggle="tab" href="#description">Product description</a></li>
+                                            <li><a data-toggle="tab" href="#specs">Product Specs</a></li>
+                                        </ul>
+
+                                        <div class="tab-content" ng-show=" desc">
+                                            <div id="description" class="tab-pane fade in active">
+                                                <h3>Product description</h3>
+                                                <p>{{selectedSubProduct.description}}</p>
+                                            </div>
+                                            <div id="specs" class="tab-pane fade">
+                                                <h3>Product Specifications</h3>
+                                                <p>{{selectedSubProduct.spec}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
 
 
                     </div>
                 </div>
             </div>
         </div>
-    
 
-    <div class="section">
-        <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="section">
+            <div class="container">
+                <center class="section-heads">
+                    <h3>Survival Checklist:</h3>
+                </center>
+                <p>
+                    STOCK UP FOR YOUR SAFETY AND SURVIVAL WITH OUR ESSENTIAL CAMPING ITEMS CHECKLIST.
+                </p>
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        <div class="panel checklist">
+                            <div class="panel-heading">
+                                <h4>EQUIPMENT:</h4>
+                            </div>
+                            <div class="panel-body">
+                                <center><img src="img/checklist/radio.jpg" class="img-responsive img-circle" width="200px" /></center>
+                                <hr />
+
+                                <ul>
+                                    <li>
+                                        740 Rothco Kerosene Lantern
+                                    </li>
+
+                                    <li>
+                                        639 Rothco G.I. Type Black D-Cell Flashlight
+                                    </li>
+
+                                    <li>
+                                        80002 Rothco Deluxe Solar Charger for Cell Phones
+                                    </li>
+
+                                    <li>
+                                        80004 Rothco Solar/Wind Up Radio
+                                    </li>
+
+                                    <li>
+                                        80007 Rothco 6 Bulb Solar Power/Handcrank Lantern
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="panel checklist">
+                            <div class="panel-heading">
+                                <h4>WATER &amp; SANITATION</h4>
+                            </div>
+                            <div class="panel-body">
+                                <center><img src="img/checklist/bottle.jpg" class="img-responsive img-circle" width="200px" /></center>
+                                <hr />
+                                <ul>
+                                    <li>
+                                        7741 G.I. Issue Water Pure Powder Packets
+                                    </li>
+
+                                    <li>
+                                        535 Rothco Five Gallon Collapsible Water Carrier
+                                    </li>
+                                    <li>
+                                        604 Rothco G.I. 1 Quart Canteen
+                                    </li>
+                                    <li>
+                                        540 Rothco Five Gallon Solar Camp Shower
+                                    </li>
+                                    <li>
+                                        560 Rothco Portable Camp Toilet
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="panel checklist">
+                            <div class="panel-heading">
+                                <h4>SHELTER &amp; BEDDING:</h4>
+                            </div>
+                            <div class="panel-body">
+                                <center><img src="img/checklist/tent.jpg" class="img-responsive img-circle" width="200px" /></center>
+                                <hr />
+
+                                <ul>
+                                    <li>
+                                        3808 Rothco Camouflage 2-Man Trail Tent
+                                    </li>
+
+                                    <li>
+                                        4579 Rothco Aluminum G.I. Style Camping Cot
+                                    </li>
+
+                                    <li>
+                                        2685 Rothco Super Hammock
+                                    </li>
+
+                                    <li>
+                                        4089 Rothco Foam Sleeping Pad w/Ties
+                                    </li>
+
+                                    <li>
+                                        1034 Rothco Polarshield Sleeping Bag Survival Blanket
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-lg-4">
+                        <div class="panel checklist">
+                            <div class="panel-heading">
+                                <h4>TOOLS:</h4>
+                            </div>
+                            <div class="panel-body">
+                                <center><img src="img/checklist/knive.jpg" class="img-responsive img-circle" width="200px" /></center>
+                                <hr />
+
+                                <ul>
+                                    <li>
+                                        40 Rothco 5-In-1 Multi Purpose Tool
+                                    </li>
+
+
+                                    <li>
+                                        3674 Rothco Paracord Knife w/Fire Starter
+                                    </li>
+
+                                    <li>
+                                        406 Rothco Military Marching Compass
+                                    </li>
+
+
+                                    <li>
+                                        25000 Rothco 8-In-1 LED Utility Card Tool
+                                    </li>
+
+
+                                    <li>
+                                        50 Rothco Folding Shovel
+                                    </li>
+
+
+                                    <li>
+                                        8312 Rothco Commando Wire Saw
+                                    </li>
+
+
+                                    <li>
+                                        308 Rothco Nylon Paracord
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="panel checklist">
+                            <div class="panel-heading">
+                                <h4>PACKS &amp; SURVIVAL GEAR:</h4>
+                            </div>
+                            <div class="panel-body">
+                                <center><img src="img/checklist/bag.jpg" class="img-responsive img-circle" width="200px" /></center>
+                                <hr />
+
+                                <ul>
+                                    <li>
+                                        2289 Rothco Medium Transport Pack
+                                    </li>
+
+                                    <li>
+                                        2438 Rothco Advanced Tactical Bag
+                                    </li>
+                                    <li>
+                                        25130 Rothco Tactisling Transport Pack
+                                    </li>
+
+                                    <li>
+                                        3681 Rothco All Weather Emergency Poncho
+                                    </li>
+
+                                    <li>
+                                        8537 Rothco Tactical Shemagh
+                                    </li>
+
+                                    <li>
+                                        5811 Rothco Boonie Hat
+                                    </li>
+
+                                    <li>
+                                        7727 Rothco G.I. Type Insect Repellant
+                                    </li>
+
+                                    <li>
+                                        8335 Rothco General Purpose First Aid Kit
+                                    </li>
+
+                                    <li>
+                                        2720 Rothco Survival Kit
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="panel checklist">
+                            <div class="panel-heading">
+                                <h4>COOKING:</h4>
+                            </div>
+                            <div class="panel-body">
+                                <center><img src="img/checklist/cuttlery.jpg" class="img-responsive img-circle" width="200px" /></center>
+                                <hr />
+
+                                <ul>
+                                    <li>
+                                        648 Solid Fuel Cubes
+                                    </li>
+
+                                    <li>
+                                        9208 Emergency Food Rations
+                                    </li>
+
+                                    <li>
+                                        640 Rothco Portable Commando Cooker
+                                    </li>
+
+                                    <li>
+                                        130 Rothco G.I. Type Stainless Steel Mess Kit
+                                    </li>
+
+                                    <li>
+                                        480 Rothco Chow Kit
+                                    </li>
+
+                                    <li>
+                                        9938 Rothco G.I. Type P-51 Can Opener
+                                    </li>
+
+                                    <li>
+                                        513 Rothco
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
             <center class="section-heads">
-                <h3>Survival Checklist:</h3>
+                <h3>Our Clients:</h3>
             </center>
-            <p>
-                STOCK UP FOR YOUR SAFETY AND SURVIVAL WITH OUR ESSENTIAL CAMPING ITEMS CHECKLIST.
-            </p>
-            <div class="row">
-
-                <div class="col-lg-4">
-                    <div class="panel checklist">
-                        <div class="panel-heading">
-                            <h4>EQUIPMENT:</h4>
-                        </div>
-                        <div class="panel-body">
-                            <center><img src="img/checklist/radio.jpg" class="img-responsive img-circle" width="200px" /></center>
-                            <hr />
-
-                            <ul>
-                                <li>
-                                    740 Rothco Kerosene Lantern
-                                </li>
-
-                                <li>
-                                    639 Rothco G.I. Type Black D-Cell Flashlight
-                                </li>
-
-                                <li>
-                                    80002 Rothco Deluxe Solar Charger for Cell Phones
-                                </li>
-
-                                <li>
-                                    80004 Rothco Solar/Wind Up Radio
-                                </li>
-
-                                <li>
-                                    80007 Rothco 6 Bulb Solar Power/Handcrank Lantern
-                                </li>
-                            </ul>
-
-                        </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/msfholland.gif">
+                        <center>
+                            <h5>MSF Holland</h5>
+                        </center>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel checklist">
-                        <div class="panel-heading">
-                            <h4>WATER &amp; SANITATION</h4>
-                        </div>
-                        <div class="panel-body">
-                            <center><img src="img/checklist/bottle.jpg" class="img-responsive img-circle" width="200px" /></center>
-                            <hr />
-                            <ul>
-                                <li>
-                                    7741 G.I. Issue Water Pure Powder Packets
-                                </li>
-
-                                <li>
-                                    535 Rothco Five Gallon Collapsible Water Carrier
-                                </li>
-                                <li>
-                                    604 Rothco G.I. 1 Quart Canteen
-                                </li>
-                                <li>
-                                    540 Rothco Five Gallon Solar Camp Shower
-                                </li>
-                                <li>
-                                    560 Rothco Portable Camp Toilet
-                                </li>
-                            </ul>
-
-                        </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/MSFFRANCE.png">
+                        <center>
+                            <h5>MSF France</h5>
+                        </center>
                     </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="panel checklist">
-                        <div class="panel-heading">
-                            <h4>SHELTER &amp; BEDDING:</h4>
-                        </div>
-                        <div class="panel-body">
-                            <center><img src="img/checklist/tent.jpg" class="img-responsive img-circle" width="200px" /></center>
-                            <hr />
-
-                            <ul>
-                                <li>
-                                    3808 Rothco Camouflage 2-Man Trail Tent
-                                </li>
-
-                                <li>
-                                    4579 Rothco Aluminum G.I. Style Camping Cot
-                                </li>
-
-                                <li>
-                                    2685 Rothco Super Hammock
-                                </li>
-
-                                <li>
-                                    4089 Rothco Foam Sleeping Pad w/Ties
-                                </li>
-
-                                <li>
-                                    1034 Rothco Polarshield Sleeping Bag Survival Blanket
-                                </li>
-                            </ul>
-
-                        </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/msfswitzerland.jpg">
+                        <center>
+                            <h5>MSF Switezerland</h5>
+                        </center>
                     </div>
-                </div>
-
-
-
-
-                <div class="col-lg-4">
-                    <div class="panel checklist">
-                        <div class="panel-heading">
-                            <h4>TOOLS:</h4>
-                        </div>
-                        <div class="panel-body">
-                            <center><img src="img/checklist/knive.jpg" class="img-responsive img-circle" width="200px" /></center>
-                            <hr />
-
-                            <ul>
-                                <li>
-                                    40 Rothco 5-In-1 Multi Purpose Tool
-                                </li>
-
-
-                                <li>
-                                    3674 Rothco Paracord Knife w/Fire Starter
-                                </li>
-
-                                <li>
-                                    406 Rothco Military Marching Compass
-                                </li>
-
-
-                                <li>
-                                    25000 Rothco 8-In-1 LED Utility Card Tool
-                                </li>
-
-
-                                <li>
-                                    50 Rothco Folding Shovel
-                                </li>
-
-
-                                <li>
-                                    8312 Rothco Commando Wire Saw
-                                </li>
-
-
-                                <li>
-                                    308 Rothco Nylon Paracord
-                                </li>
-
-                            </ul>
-
-                        </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/Medair.png">
+                        <center>
+                            <h5>MEDAIR</h5>
+                        </center>
                     </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="panel checklist">
-                        <div class="panel-heading">
-                            <h4>PACKS &amp; SURVIVAL GEAR:</h4>
-                        </div>
-                        <div class="panel-body">
-                            <center><img src="img/checklist/bag.jpg" class="img-responsive img-circle" width="200px" /></center>
-                            <hr />
-
-                            <ul>
-                                <li>
-                                    2289 Rothco Medium Transport Pack
-                                </li>
-
-                                <li>
-                                    2438 Rothco Advanced Tactical Bag
-                                </li>
-                                <li>
-                                    25130 Rothco Tactisling Transport Pack
-                                </li>
-
-                                <li>
-                                    3681 Rothco All Weather Emergency Poncho
-                                </li>
-
-                                <li>
-                                    8537 Rothco Tactical Shemagh
-                                </li>
-
-                                <li>
-                                    5811 Rothco Boonie Hat
-                                </li>
-
-                                <li>
-                                    7727 Rothco G.I. Type Insect Repellant
-                                </li>
-
-                                <li>
-                                    8335 Rothco General Purpose First Aid Kit
-                                </li>
-
-                                <li>
-                                    2720 Rothco Survival Kit
-                                </li>
-                            </ul>
-
-                        </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/ADRA.png">
+                        <center>
+                            <h5>ADRA Somalia</h5>
+                        </center>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel checklist">
-                        <div class="panel-heading">
-                            <h4>COOKING:</h4>
-                        </div>
-                        <div class="panel-body">
-                            <center><img src="img/checklist/cuttlery.jpg" class="img-responsive img-circle" width="200px" /></center>
-                            <hr />
-
-                            <ul>
-                                <li>
-                                    648 Solid Fuel Cubes
-                                </li>
-
-                                <li>
-                                    9208 Emergency Food Rations
-                                </li>
-
-                                <li>
-                                    640 Rothco Portable Commando Cooker
-                                </li>
-
-                                <li>
-                                    130 Rothco G.I. Type Stainless Steel Mess Kit
-                                </li>
-
-                                <li>
-                                    480 Rothco Chow Kit
-                                </li>
-
-                                <li>
-                                    9938 Rothco G.I. Type P-51 Can Opener
-                                </li>
-
-                                <li>
-                                    513 Rothco
-                                </li>
-                            </ul>
-
-                        </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/concern.gif">
+                        <center>
+                            <h5>Concern International</h5>
+                        </center>
                     </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <center class="section-heads">
-            <h3>Our Clients:</h3>
-        </center>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/msfholland.gif">
-                    <center>
-                        <h5>MSF Holland</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/MSFFRANCE.png">
-                    <center>
-                        <h5>MSF France</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/msfswitzerland.jpg">
-                    <center>
-                        <h5>MSF Switezerland</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/Medair.png">
-                    <center>
-                        <h5>MEDAIR</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/ADRA.png">
-                    <center>
-                        <h5>ADRA Somalia</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/concern.gif">
-                    <center>
-                        <h5>Concern International</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/ffth.jpg">
-                    <center>
-                        <h5>Food For The Hungry</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/techno-relief.png">
-                    <center>
-                        <h5>Techno Relief</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/malteserinternational.jpg">
-                    <center>
-                        <h5>Malterser International</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/norwegianchurchaid.png">
-                    <center>
-                        <h5>Norwegian Church Aid</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/spartanrelief.jpg">
-                    <center>
-                        <h5>Spartan Relief</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/tearfund.png">
-                    <center>
-                        <h5>TEAR Fund</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/unicef.png">
-                    <center>
-                        <h5>UNICEF</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/christianmissionaid.png">
-                    <center>
-                        <h5>Christian Mission Aid</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/worldvision.png">
-                    <center>
-                        <h5>World Vision</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/farmafrica.png">
-                    <center>
-                        <h5>Farm Africa</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/undp.jpg">
-                    <center>
-                        <h5>UNDP Somaila, UNDP Sudan</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/wfp.jpg">
-                    <center>
-                        <h5>WFP Kenya , WFP Somalia</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/goal.png">
-                    <center>
-                        <h5>Goal Sudan , Goal Kenya</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/UNHCR.png">
-                    <center>
-                        <h5>UNHCR Regional Office , UNHCR Somalia</h5>
-                    </center>
-                </div>
-                <div class="col-sm-2">
-                    <img class="img-responsive img-rounded" src="img/clientlogos/unfao.png">
-                    <center>
-                        <h5>UNFAO</h5>
-                    </center>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/ffth.jpg">
+                        <center>
+                            <h5>Food For The Hungry</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/techno-relief.png">
+                        <center>
+                            <h5>Techno Relief</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/malteserinternational.jpg">
+                        <center>
+                            <h5>Malterser International</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/norwegianchurchaid.png">
+                        <center>
+                            <h5>Norwegian Church Aid</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/spartanrelief.jpg">
+                        <center>
+                            <h5>Spartan Relief</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/tearfund.png">
+                        <center>
+                            <h5>TEAR Fund</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/unicef.png">
+                        <center>
+                            <h5>UNICEF</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/christianmissionaid.png">
+                        <center>
+                            <h5>Christian Mission Aid</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/worldvision.png">
+                        <center>
+                            <h5>World Vision</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/farmafrica.png">
+                        <center>
+                            <h5>Farm Africa</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/undp.jpg">
+                        <center>
+                            <h5>UNDP Somaila, UNDP Sudan</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/wfp.jpg">
+                        <center>
+                            <h5>WFP Kenya , WFP Somalia</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/goal.png">
+                        <center>
+                            <h5>Goal Sudan , Goal Kenya</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/UNHCR.png">
+                        <center>
+                            <h5>UNHCR Regional Office , UNHCR Somalia</h5>
+                        </center>
+                    </div>
+                    <div class="col-sm-2">
+                        <img class="img-responsive img-rounded" src="img/clientlogos/unfao.png">
+                        <center>
+                            <h5>UNFAO</h5>
+                        </center>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="section  fp-auto-height">
-        <div class="myContent2">
-            <div class="row">
-                <div class="col-md-offset-4">
-                    <div class="col-md-4">
-                        <h3>Survival Equip Limited</h3>
-                        <p>
-                            <i class="fa fa-envelope-o"></i> <span> P.O Box 14258-00800 Nairobi,Kenya.</span> <br>
-                            <i class="fa fa-phone"></i> <span>
+        <div class="section  fp-auto-height">
+            <div class="myContent2">
+                <div class="row">
+                    <div class="col-md-offset-4">
+                        <div class="col-md-4">
+                            <h3>Survival Equip Limited</h3>
+                            <p>
+                                <i class="fa fa-envelope-o"></i> <span> P.O Box 14258-00800 Nairobi,Kenya.</span> <br>
+                                <i class="fa fa-phone"></i> <span>
                                     Tel: (+254) 20 375 300 <br>
                                     or:  (+254) 20 675 1399
                                 </span> <br>
-                            <i class="fa fa-fax"></i> <span> Fax: (+254) 20 375 2999</span> <br>
-                            <i class="fa fa-mobile-phone"></i> <span>
+                                <i class="fa fa-fax"></i> <span> Fax: (+254) 20 375 2999</span> <br>
+                                <i class="fa fa-mobile-phone"></i> <span>
                                     Mobile: (+254) 722 511 972<br>
                                     or: (+254) 735 831 548
                                 </span><br>
-                            <i class="fa fa-at"></i> <span> Email: harman@survivalequip.com </span>
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Social</h3>
-                        <p>
-                            <a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                        </p>
+                                <i class="fa fa-at"></i> <span> Email: harman@survivalequip.com </span>
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Social</h3>
+                            <p>
+                                <a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
 </body>
+
 </html>
