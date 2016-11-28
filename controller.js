@@ -33,7 +33,7 @@ $scope.getDefult();
         url: 'https://survival-eqip-limited.firebaseio.com/clients.json',
     })
         .then(function (res) {
-         //   console.log(res.data);
+           console.log(res.data);
             $rootScope.clients = res.data
         })
         .catch(function (err) {
