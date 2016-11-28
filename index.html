@@ -21,18 +21,6 @@
     <link href="customcss/style.css" rel="stylesheet" />
 
 
-    <script src="angular/angular.min.js"></script>
-    <script src="controller.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="fullpage.js/dist/scrolloverflow.min.js"></script>
-    <script src="fullpage.js/dist/jquery.fullpage.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="angular/angular-ui-bs.js"></script>
-    <script src="app.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-
-
 </head>
 
 <body ng-app="survivalequip" ng-controller="productsCtrl">
@@ -336,21 +324,6 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="section">
             <div class="container">
                 <center class="section-heads">
@@ -616,130 +589,10 @@
             </center>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/msfholland.gif">
+                    <div class="col-sm-2" ng-repeat="client in clients">
+                        <img class="img-responsive img-rounded" src="{{client.image}}">
                         <center>
-                            <h5>MSF Holland</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/MSFFRANCE.png">
-                        <center>
-                            <h5>MSF France</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/msfswitzerland.jpg">
-                        <center>
-                            <h5>MSF Switezerland</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/Medair.png">
-                        <center>
-                            <h5>MEDAIR</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/ADRA.png">
-                        <center>
-                            <h5>ADRA Somalia</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/concern.gif">
-                        <center>
-                            <h5>Concern International</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/ffth.jpg">
-                        <center>
-                            <h5>Food For The Hungry</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/techno-relief.png">
-                        <center>
-                            <h5>Techno Relief</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/malteserinternational.jpg">
-                        <center>
-                            <h5>Malterser International</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/norwegianchurchaid.png">
-                        <center>
-                            <h5>Norwegian Church Aid</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/spartanrelief.jpg">
-                        <center>
-                            <h5>Spartan Relief</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/tearfund.png">
-                        <center>
-                            <h5>TEAR Fund</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/unicef.png">
-                        <center>
-                            <h5>UNICEF</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/christianmissionaid.png">
-                        <center>
-                            <h5>Christian Mission Aid</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/worldvision.png">
-                        <center>
-                            <h5>World Vision</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/farmafrica.png">
-                        <center>
-                            <h5>Farm Africa</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/undp.jpg">
-                        <center>
-                            <h5>UNDP Somaila, UNDP Sudan</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/wfp.jpg">
-                        <center>
-                            <h5>WFP Kenya , WFP Somalia</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/goal.png">
-                        <center>
-                            <h5>Goal Sudan , Goal Kenya</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/UNHCR.png">
-                        <center>
-                            <h5>UNHCR Regional Office , UNHCR Somalia</h5>
-                        </center>
-                    </div>
-                    <div class="col-sm-2">
-                        <img class="img-responsive img-rounded" src="img/clientlogos/unfao.png">
-                        <center>
-                            <h5>UNFAO</h5>
+                            <h5>{{client.name}}</h5>
                         </center>
                     </div>
                 </div>
@@ -767,10 +620,11 @@
                             </p>
                         </div>
                         <div class="col-md-4">
-                            <h3>Social</h3>
-                            <p>
-                                <a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                            </p>
+                    <br>
+                    <br>
+                          
+                                <a href="https://www.rothco.com/"><img class="img-responsive img-circle" src="img/rothco.jpg"/></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -778,5 +632,14 @@
         </div>
     </div>
 </body>
-
+    <script src="angular/angular.min.js"></script>
+    <script src="controller.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="fullpage.js/dist/scrolloverflow.min.js"></script>
+    <script src="fullpage.js/dist/jquery.fullpage.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="angular/angular-ui-bs.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 </html>

@@ -28,7 +28,17 @@ $scope.getDefult();
         $rootScope.selectedSubProduct = product;
     }
 
-
+    $http({
+        method: "GET",
+        url: 'https://survival-eqip-limited.firebaseio.com/clients.json',
+    })
+        .then(function (res) {
+         //   console.log(res.data);
+            $rootScope.clients = res.data
+        })
+        .catch(function (err) {
+            console.log(err);
+        })
 
     $http
         ({
