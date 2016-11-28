@@ -1,10 +1,18 @@
 
 
-var survivalequip = angular.module('survivalequip', ['ui.bootstrap']);
+var survivalequip = angular.module('survivalequip', ['ui.bootstrap','firebase']);
 
-survivalequip.controller('productsCtrl', function ($scope, $http, $rootScope, $timeout) {
-
+survivalequip.controller('productsCtrl', function ($scope,$firebaseArray,$firebaseObject, $http, $rootScope, $timeout) {
+    var config = {
+        apiKey: "AIzaSyA5DHBONu4Zza7w-ep7uznIXYpRCg6oCzQ",
+        authDomain: "survival-eqip-limited.firebaseapp.com",
+        databaseURL: "https://survival-eqip-limited.firebaseio.com",
+        storageBucket: "survival-eqip-limited.appspot.com",
+        messagingSenderId: "115364664381"
+    };
+    firebase.initializeApp(config);
 $scope.getDefult = function(){
+
     $http
         ({
             method: 'GET',
@@ -28,29 +36,13 @@ $scope.getDefult();
         $rootScope.selectedSubProduct = product;
     }
 
-    $http({
-        method: "GET",
-        url: 'https://survival-eqip-limited.firebaseio.com/clients.json',
-    })
-        .then(function (res) {
-           console.log(res.data);
-            $rootScope.clients = res.data
-        })
-        .catch(function (err) {
-            console.log(err);
-        })
 
-    $http
-        ({
-            method: 'GET',
-            url: 'https://survival-eqip-limited.firebaseio.com/products.json',
-        })
-        .then(function (res) {
-            $scope.products = res.data;
-        })
-        .catch(function (err) {
-            console.log(err);
-        })
+ var ref = firebase.database().ref('clients');
+ $rootScope.clients =  $firebaseArray(ref);
+
+  var ref = firebase.database().ref('products');
+ $scope.products =  $firebaseObject(ref);
+
 
 
 
