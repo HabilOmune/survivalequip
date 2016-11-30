@@ -11,26 +11,26 @@
     <meta name="theme-color" content="#333399">
     <title>survivalequip.com | Welcome</title>
 
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 
 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    
+
     <link href="https://fonts.googleapis.com/css?family=Dosis|Poiret+One" rel="stylesheet">
     <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
@@ -257,7 +257,7 @@
                         </li>
                     </ul>
 
-                    <div class="tab-content container" >
+                    <div class="tab-content container">
                         <div id="defult" class="tab-pane fade in active">
                             <br />
                             <div class="row">
@@ -274,11 +274,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <ul class="nav nav-tabs" ng-show=" desc">
+                                        <ul class="nav nav-tabs">
                                             <li class="active"><a data-toggle="tab" href="#description">Product description</a></li>
                                         </ul>
 
-                                        <div class="tab-content" ng-show=" desc">
+                                        <div class="tab-content">
                                             <div id="description" class="tab-pane fade in active">
                                                 <h3>Product description</h3>
                                                 <p>{{selectedSubProduct.description}}</p>
@@ -310,7 +310,7 @@
                                     <div class="col-lg-6">
                                         <ul class="nav nav-tabs" ng-show=" desc">
                                             <li class="active"><a data-toggle="tab" href="#description">Product description</a></li>
-                                            
+
                                         </ul>
 
                                         <div class="tab-content" ng-show=" desc">
@@ -331,7 +331,6 @@
                 </div>
             </div>
         </div>
-
         <div class="section">
             <div class="container">
                 <center class="section-heads">
@@ -597,7 +596,7 @@
             </center>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-2" ng-repeat="client in clients">
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" ng-repeat="client in clients">
                         <img class="img-responsive img-rounded" src="{{client.image}}">
                         <center>
                             <h5>{{client.name}}</h5>
@@ -608,13 +607,17 @@
         </div>
 
         <div class="section  fp-auto-height">
+
             <div class="myContent2">
-                <div class="row">
-                    <div class="col-md-offset-4">
-                        <div class="col-md-4">
-                            <h3>Survival Equip Limited</h3>
+                <div class="container">
+                    <div class="row">
+                    <div class="col-lg-offset-2 col-lg-8">    
+                        <div class="col-xs-12 col-sm-12  col-md-6 col-lg-6">
+                            <center>
+                                <h3>Survival Equip Limited</h3>
+                            </center>
                             <p>
-                                <i class="fa fa-envelope-o"></i> <span style="color:white; font-size:17px"> P.O Box 14258-00800 Nairobi,Kenya.</span> <br>
+                                <i class="fa fa-envelope-o"></i> <span style="color:white; font-size:17px"> P.O Box 14258-00800 Nairobi,Kenya.</span>                                <br>
                                 <i class="fa fa-mobile-phone"></i> <span style="color:white; font-size:17px">
                                     Mobile: (+254) 722 511 972<br>
                                     or: (+254) 735 831 548
@@ -622,29 +625,34 @@
                                 <i class="fa fa-at"></i> <span><a style="color:white; font-size:17px" href="mailto:harman@survivalequip.com?Subject=SurvivalEquip%20mail%20re-direct" target="_top">Email: harman@survivalequip.com</a></span>
                             </p>
                         </div>
-                        <div class="col-md-4">
-                    <br>
-                    <br>
-                                <a href="https://www.rothco.com/"><img class="img-responsive img-circle" src="img/rothco.jpg"/></a>
-                            
+
+
+                        <div class="col-xs-12 col-sm-12  col-md-6 col-lg-6">
+                            <center>
+                                <h3>Authorized Rothco Dealer</h3>
+                            </center>
+                                <a href="https://www.rothco.com/"><img class="img-circle img-thumbnail  img-responsive img- center-block" style="padding-bottom:8px" src="img/rothco.jpg" /></a>
+                       
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-    <script src="angular/angular.min.js"></script>
-    <script src="angularfire/firebase.js"></script>
-    <script src="angularfire/angularfire.js"></script>
-    <script src="controller.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="fullpage.js/dist/scrolloverflow.min.js"></script>
-    <script src="fullpage.js/dist/jquery.fullpage.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="angular/angular-ui-bs.js"></script>
-    <script src="app.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <link href="fullpage.js/dist/jquery.fullpage.css" rel="stylesheet" />
+<script src="angular/angular.min.js"></script>
+<script src="angularfire/firebase.js"></script>
+<script src="angularfire/angularfire.js"></script>
+<script src="controller.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="fullpage.js/dist/scrolloverflow.min.js"></script>
+<script src="fullpage.js/dist/jquery.fullpage.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="angular/angular-ui-bs.js"></script>
+<script src="app.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<link href="fullpage.js/dist/jquery.fullpage.css" rel="stylesheet" />
+
 </html>

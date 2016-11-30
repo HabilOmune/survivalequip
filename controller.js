@@ -27,7 +27,6 @@ survivalequip.controller('productsCtrl', function ($scope, $firebaseArray, $fire
 
     $scope.setPrd = function (value) {
         $rootScope.selectedProduct = value;
-        console.log(value);
         $rootScope.selectedSubProduct = null;
 
     }
@@ -43,11 +42,6 @@ survivalequip.controller('productsCtrl', function ($scope, $firebaseArray, $fire
 
     var ref = firebase.database().ref('products');
     $scope.products = $firebaseObject(ref);
-
-
-
-
-
 
     $scope.populate = function (value, key) {
         $rootScope.detail = value;
